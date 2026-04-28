@@ -1,0 +1,38 @@
+.c-links {
+  @apply
+  py-15
+  border-t
+  border-slate-200
+  dark:border-white/5
+  opacity-60
+
+  flex
+  flex-col
+  items-center
+  justify-around
+  gap-10
+  md:flex-row
+  md:gap-0
+
+  text-xs
+  uppercase
+  tracking-[0.3em];
+
+  .c-links-container {
+    @apply flex flex-col gap-2 items-center justify-center;
+  }
+
+  .c-links-name {
+    @apply text-sm;
+  }
+
+  .c-links-links-container {
+    @apply flex gap-2;
+  }
+
+  .c-links-link {
+    @apply hover:text-blue-500 active:scale-95;
+  }
+
+
+}

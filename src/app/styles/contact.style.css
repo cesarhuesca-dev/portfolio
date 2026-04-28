@@ -1,0 +1,123 @@
+.c-contact {
+
+  @apply py-40;
+
+  .c-contact-card {
+    @apply
+    relative
+    overflow-hidden
+    p-12
+    md:p-24
+    border
+    border-none
+    rounded-4xl
+  bg-black/95
+  dark:bg-black/95
+    hover:scale-[1.02]
+    hover:shadow-xl
+    hover:shadow-black/30
+    dark:hover:shadow-white/5
+    transition-all;
+
+    .c-contact-card-container {
+      @apply relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20;
+    }
+
+    .c-contact-card-form {
+      @apply space-y-4;
+
+      .c-contact-card-form-inputs-container {
+        @apply grid grid-cols-2 gap-4;
+      }
+
+      .c-contact-card-form-input {
+        @apply
+        bg-white/5
+        border
+        border-white/10
+        rounded-2xl
+        p-5
+        text-white
+        focus:outline-none
+        focus:border-blue-500
+        transition-all;
+      }
+
+      .c-contact-card-form-textarea {
+        @apply
+        w-full
+        bg-white/5
+        border
+        border-white/10
+        rounded-2xl
+        p-5
+        text-white
+        h-40
+        focus:outline-none
+        focus:border-blue-500
+        transition-all;
+      }
+
+      .c-contact-card-form-button {
+        @apply
+        w-full
+        bg-blue-700
+        text-white
+        font-bold
+        py-5
+        rounded-2xl
+        hover:bg-blue-500/90
+        transition-all
+        active:scale-95;
+      }
+    }
+
+    .c-contact-card-form-blur {
+      @apply absolute top-0 right-0 w-1/2 h-full bg-blue-300/5 blur-[100px] pointer-events-none;
+    }
+
+    .c-contact-card-content {
+
+      .c-contact-card-content-title {
+        @apply text-5xl font-bold tracking-tighter text-white mb-8;
+      }
+
+      .c-contact-card-content-description {
+        @apply text-lg text-white/50 leading-relaxed mb-12;
+      }
+
+      .c-contact-card-content-email {
+        @apply flex items-center gap-4 text-white/80;
+
+        .c-contact-card-content-email-icon {
+          @apply w-12 h-12 rounded-full bg-white/5 flex items-center justify-center transition-colors;
+        }
+
+        .c-contact-card-content-email-text {
+          @apply active:scale-95;
+        }
+      }
+
+      .c-contact-card-content-email:active {
+        @apply scale-95 duration-200;
+      }
+
+      .c-contact-card-content-email:hover {
+
+        @apply cursor-pointer;
+
+        .c-contact-card-content-email-icon {
+          @apply bg-blue-500 transition-colors duration-300;
+        }
+
+        .c-contact-card-content-email-text {
+          @apply text-blue-500 transition-colors duration-300
+        }
+
+      }
+
+
+    }
+  }
+
+}

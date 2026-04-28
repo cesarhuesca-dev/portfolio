@@ -3,6 +3,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@styles/*": ["./src/app/styles/*"],
+      "@services/*": ["./src/app/services/*"],
+      "@components/*": ["./src/app/components/*"],
+    },
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,

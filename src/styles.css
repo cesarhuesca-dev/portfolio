@@ -1,3 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+
+@import "./app/styles/main.style.css";
+@import "./app/styles/navbar.style.css";
+@import "./app/styles/hero.style.css";
+@import "./app/styles/links.style.css";
+@import "./app/styles/projects.style.css";
+@import "./app/styles/contact.style.css";
+@import "./app/styles/scrollbar.style.css";
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+

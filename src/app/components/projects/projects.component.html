@@ -1,0 +1,23 @@
+<section class="c-projects">
+  <div class="c-projects-container">
+    @for (item of projects; let i = $index ; track item.id) {
+      <div class="c-projects-item">
+        <div class="c-projects-item-body">
+          <div class="c-projects-item-header">
+              <span class="c-projects-item-header-status">{{item.status}}</span>
+          </div>
+          <div class="c-projects-item-content">
+            <h4 class="c-projects-item-content-title">{{item.name}}</h4>
+            <p class="c-projects-item-content-description ">{{item.desc}}</p>
+          </div>
+          <div class="c-projects-item-footer">
+              <span class="c-projects-item-footer-title">Ver Estudio de Caso</span>
+              <svg class="c-projects-item-footer-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

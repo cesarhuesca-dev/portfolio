@@ -1,0 +1,68 @@
+.c-navbar {
+  @apply
+  fixed
+  top-8
+  left-1/2
+  -translate-x-1/2
+  z-50 w-full
+  max-w-[95%]
+  md:max-w-3xl;
+}
+
+.c-navbar-container {
+
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  @apply rounded-full px-8 py-4 flex justify-between items-center;
+}
+
+.c-navbar-links-container {
+  @apply flex items-center gap-6;
+
+  .c-navbar-link-title {
+    @apply
+    text-lg
+    font-bold
+    tracking-tighter
+    bg-linear-to-r
+
+    dark:from-white
+    dark:to-slate-500
+
+    from-black/80
+    to-slate-700
+
+    bg-clip-text
+    text-transparent
+  }
+
+  .c-navbar-link-buttons-container {
+    @apply md:flex gap-6 text-sm font-medium;
+  }
+
+  .c-navbar-link {
+    @apply hover:opacity-20 active:scale-90 transition-all;
+  }
+}
+
+.c-navbar-buttons-container {
+  @apply flex items-center gap-4;
+
+  .c-navbar-buttons-separator {
+    @apply h-4 w-px bg-white/10 mx-2;
+  }
+
+  .c-navbar-button-theme {
+    @apply opacity-60 hover:opacity-100 transition-opacity;
+  }
+
+  .c-navbar-button-cv {
+    @apply text-sm font-bold bg-white text-black px-5 py-2 rounded-full hover:scale-105 transition-transform active:scale-95;
+  }
+}
+
+
