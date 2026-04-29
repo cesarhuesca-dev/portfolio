@@ -5,10 +5,11 @@ import { LinksComponent } from '@components/links/links.component';
 import { NavbarComponent } from '@components/navbar/navbar.component';
 import { ProjectsComponent } from '@components/projects/projects.component';
 import { ThemeService } from '@services/theme.service';
+import { SkillsComponent } from "@components/skills/skills.component";
 
 @Component({
   selector: 'app-root',
-  imports: [HeroComponent, NavbarComponent, LinksComponent, ContactComponent, ProjectsComponent],
+  imports: [HeroComponent, NavbarComponent, LinksComponent, ContactComponent, ProjectsComponent, SkillsComponent],
   templateUrl: './app.html'
 })
 export class App implements OnInit {

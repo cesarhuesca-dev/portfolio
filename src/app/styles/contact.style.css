@@ -1,7 +1,5 @@
 .c-contact {
-
-  @apply py-40;
-
+  /* @apply py-40; */
   .c-contact-card {
     @apply
     relative

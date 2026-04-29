@@ -18,11 +18,11 @@
   @apply fixed inset-0 pointer-events-none overflow-hidden z-0;
 
   .c-main-background-effect-1 {
-    @apply absolute top-[-10%] left-[-10%] w-[70%] h-[50%] dark:bg-blue-500/10 bg-gray-500/50 blur-[120px] rounded-full animate-pulse;
+    @apply absolute -z-1 top-[-10%] left-[-10%] w-[70%] h-[50%] dark:bg-blue-500/10 bg-gray-500/50 blur-[120px] rounded-full animate-pulse;
   }
 
   .c-main-background-effect-2 {
-    @apply absolute bottom-[-10%] right-[-10%] w-[50%] h-[40%] dark:bg-blue-500/10 bg-gray-500/50 blur-[120px] rounded-full animate-pulse;
+    @apply absolute -z-1 bottom-[-10%] right-[-10%] w-[50%] h-[40%] dark:bg-blue-500/10 bg-gray-500/50 blur-[120px] rounded-full animate-pulse;
   }
 
 }

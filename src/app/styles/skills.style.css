@@ -1,0 +1,66 @@
+.c-skills {
+
+  @apply mb-20;
+
+  .c-skills-title {
+    @apply p-8 mb-5 flex justify-center items-center;
+
+    .c-skills-title-text {
+      @apply text-center font-bold text-6xl md:text-[100px] tracking-tighter leading-[0.9];
+    }
+
+    .c-skills-title-blur {
+      @apply
+      absolute
+      w-[70%]
+      h-[6%]
+      dark:bg-blue-500/20
+      bg-gray-500/30
+      blur-[110px]
+      -z-1
+      rounded-full;
+    }
+  }
+
+  .c-skills-content {
+    @apply flex flex-col;
+
+    .c-skills-container {
+      @apply flex justify-center gap-6 px-6 mb-10;
+    }
+
+    .c-skills-item {
+      @apply
+      w-34
+      h-24
+      dark:bg-gray-700/40
+      bg-slate-700/70
+      rounded-xl
+      shadow-xl
+      shadow-black/20
+      ;
+    }
+
+    .c-skills-item:hover {
+      @apply rotate-5 duration-200 cursor-pointer;
+    }
+
+    .c-skills-item:active {
+      @apply scale-110;
+    }
+
+    .c-skills-item-float {
+      animation: float 7s ease-in-out infinite;
+    }
+
+    .c-skills-item-img {
+      @apply w-full h-full object-contain p-2.5;
+    }
+
+  }
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
