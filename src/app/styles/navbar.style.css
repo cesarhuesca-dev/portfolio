@@ -6,7 +6,7 @@
   -translate-x-1/2
   z-50 w-full
   max-w-[95%]
-  md:max-w-3xl;
+  md:max-w-4xl;
 }
 
 .c-navbar-container {
@@ -54,6 +54,14 @@
 
   .c-navbar-buttons-separator {
     @apply h-4 w-px bg-white/10 mx-2;
+  }
+
+  .c-navbar-button-lang {
+    @apply opacity-60 hover:opacity-100 transition-opacity flex items-center gap-1;
+
+    .c-navbar-button-lang-text {
+      @apply text-sm font-semibold uppercase;
+    }
   }
 
   .c-navbar-button-theme {

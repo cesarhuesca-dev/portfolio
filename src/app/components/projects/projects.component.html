@@ -1,7 +1,7 @@
 <section class="c-projects">
 
   <div class="c-projects-title">
-    <h1 class="c-projects-title-text">Proyectos</h1>
+    <h1 class="c-projects-title-text">{{'projects.title' | translate}}</h1>
     <div class="c-projects-title-blur"></div>
   </div>
   <div class="c-projects-container">
@@ -9,7 +9,7 @@
       <div class="c-projects-item">
         <div class="c-projects-item-body">
           <div class="c-projects-item-header">
-              <span class="c-projects-item-header-status c-projects-item-header-status-box {{item.statusClass}}">{{item.status}}</span>
+              <span class="c-projects-item-header-status c-projects-item-header-status-box {{item.statusClass}}">{{item.status | translate}}</span>
           </div>
 
           @if (item.banner) {
@@ -21,19 +21,18 @@
 
 
           <div class="c-projects-item-content">
-            <h4 class="c-projects-item-content-title">{{item.name}}</h4>
-            <p class="c-projects-item-content-description ">{{item.desc}}</p>
+            <h4 class="c-projects-item-content-title">{{item.name | translate}}</h4>
+            <p class="c-projects-item-content-description ">{{item.description | translate}}.</p>
           </div>
 
           @if(item.repo){
             <div class="c-projects-item-footer" (click)="goToGithub(item.repo)">
-              <span class="c-projects-item-footer-title">Ir a github</span>
+              <span class="c-projects-item-footer-title">{{'projects.github' | translate}}</span>
               <svg class="c-projects-item-footer-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
               </svg>
             </div>
           }
-
 
         </div>
       </div>

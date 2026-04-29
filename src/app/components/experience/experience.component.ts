@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 import { ImageModule } from 'primeng/image';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-experience',
-  imports: [ImageModule],
+  imports: [ImageModule, TranslatePipe],
   templateUrl: './experience.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

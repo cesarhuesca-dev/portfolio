@@ -1,0 +1,68 @@
+{
+  "navbar" : {
+    "title" : "Cesar Huesca",
+    "links" : {
+      "experience" : "Experiencia",
+      "projects" : "Proyectos",
+      "skills" : "Habilidades",
+      "contact" : "Contacto"
+    },
+    "download-cv" : "Descargar CV"
+  },
+  "hero": {
+    "name" : "Cesar Huesca",
+    "job" : "Desarrollador Web",
+    "description-1" : "Desarrollador web full-stack. Enfocado en la creación de aplicaciones web modernas, eficientes y escalables",
+    "description-2" : "Motivado en aprender constantemente, afrontar nuevos retos y participar en proyectos donde el software tenga un impacto real",
+    "available" : "Disponible para nuevos proyectos",
+    "contact" : "Contactar"
+  },
+  "experience" : {
+    "title" : "Experiencia",
+    "job-1" : {
+      "title" : "Desarrollador Web",
+      "company" : "Indra Sistemas Espacio",
+      "time" : "Marzo 2023 - Presente",
+      "description" : "Desarrollador de web en el proyecto Genius del área de Espacio/Defensa en Indra. Trabajo con Angular y TypeScript en el desarrollo front-end, con librerías como PrimeNG, DHTMLX y Leaflet.js. También participo en tareas back-end con .NET, con Redis y Postgresql, y para cordinacion de equipos utilizando herramientas como Git, JIRA"
+    }
+  },
+  "projects" : {
+    "title" : "Proyectos",
+    "github" : "Ir a github",
+    "project-1" : {
+      "name": "Impostor Game",
+      "description": "Juego multijugador viral de redes sociales, en el que cada jugador recibe una palabra secreta excepto uno, el impostor. \nA través de pistas, engaños y deducción, los jugadores deben descubrir al impostor, antes de que el impostor adivine la palabra real",
+      "status": "Finalizado"
+    },
+    "project-2" : {
+      "name": "Restaurant manager",
+      "description": "Plataforma intuitiva para gestionar restaurantes desde un solo lugar: mesas, pedidos, inventario y personal de forma simple y eficiente",
+      "status": "En desarrollo"
+    }
+  },
+  "contact" : {
+    "talk-1" : "Hablemos de ",
+    "talk-2" : " proyectos",
+    "description" : "Actualmente disponible para nuevos proyectos y colaboraciones. Si necesitas mis servicios, estaré encantado de ayudarte",
+    "email" : "cesarhuesca.dev@gmail.com",
+    "send" : "Enviar mensaje",
+    "placeholder-name" : "Nombre",
+    "placeholder-email" : "Email",
+    "placeholder-message" : "Mensaje"
+  },
+  "links" : {
+    "name" : "Cesar Huesca",
+    "github" : "Github",
+    "linkedin" : "LinkedIn",
+    "email" : "Email",
+    "copy" : "© 2026 Todos los derechos reservados"
+  },
+  "technology" : {
+    "angular" : "Angular",
+    "primeng" : "PrimeNg",
+    "dhtmlx" : "DHTMLX",
+    "leaflet" : "Leaflet.js",
+    "net" : ".NET",
+    "postgresql" : "Postgresql"
+  }
+}

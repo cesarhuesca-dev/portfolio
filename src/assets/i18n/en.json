@@ -1,0 +1,68 @@
+{
+  "navbar" : {
+    "title" : "Cesar Huesca",
+    "links" : {
+      "experience" : "Experience",
+      "projects" : "Projects",
+      "skills" : "Skills",
+      "contact" : "Contact"
+    },
+    "download-cv" : "Download CV"
+  },
+  "hero": {
+    "name" : "Cesar Huesca",
+    "job" : "Web Developer",
+    "description-1" : "Full-stack web developer. Focused on creating modern, efficient, and scalable web applications",
+    "description-2" : "Motivated to learn constantly, face new challenges, and participate in projects where software has a real impact",
+    "available" : "Available for new projects",
+    "contact" : "Contact"
+  },
+  "experience" : {
+    "title" : "Experience",
+    "job-1" : {
+      "title" : "Web Developer",
+      "company" : "Space Indra Sistems",
+      "time" : "March 2023 - Now",
+      "description" : "Web developer on the Genius project in the Space/Defense division at Indra. I work with Angular and TypeScript for front-end development, using libraries such as PrimeNG, DHTMLX, and Leaflet.js. I also contribute to back-end development tasks with .NET, Redis, and PostgreSQL, and coordinate teams tools like Git and Jira"
+    }
+  },
+  "projects" : {
+    "title" : "Projects",
+    "github" : "Go to github",
+    "project-1" : {
+      "name": "Impostor Game",
+      "description": "A viral multiplayer social media game where each player receives a secret word except for one—the impostor. Through clues, deception, and deduction, the players must discover the impostor before the impostor guesses the real word",
+      "status": "Completed"
+    },
+    "project-2" : {
+      "name": "Restaurant manager",
+      "description": "Intuitive platform to manage restaurants from one place: tables, orders, inventory and staff in a simple and efficient way",
+      "status": "In development"
+    }
+  },
+  "contact" : {
+    "talk-1" : "Let's talk about ",
+    "talk-2" : " project",
+    "description" : "Currently available for new projects and collaborations. If you need my services, I'd be happy to help.",
+    "email" : "cesarhuesca.dev@gmail.com",
+    "send" : "Send message",
+    "placeholder-name" : "Name",
+    "placeholder-email" : "Email",
+    "placeholder-message" : "Message"
+  },
+  "links" : {
+    "name" : "Cesar Huesca",
+    "github" : "Github",
+    "linkedin" : "LinkedIn",
+    "email" : "Email",
+    "copy" : "© 2026 All rights reserved"
+  },
+  "technology" : {
+    "angular" : "Angular",
+    "primeng" : "PrimeNg",
+    "dhtmlx" : "DHTMLX",
+    "leaflet" : "Leaflet.js",
+    "net" : ".NET",
+    "postgresql" : "Postgresql"
+  }
+}
