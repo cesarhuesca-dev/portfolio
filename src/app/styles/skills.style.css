@@ -1,6 +1,6 @@
 .c-skills {
 
-  @apply mb-20;
+  /* @apply mb-10; */
 
   .c-skills-title {
     @apply p-8 mb-5 flex justify-center items-center;
@@ -33,12 +33,14 @@
       @apply
       w-34
       h-24
-      dark:bg-gray-700/40
-      bg-slate-700/70
-      rounded-xl
+      dark:bg-slate-900
+      bg-slate-900/80
+      border
+      border-slate-800
+      rounded-lg
       shadow-xl
       shadow-black/20
-      ;
+      active:scale-105;
     }
 
     .c-skills-item:hover {
@@ -55,6 +57,10 @@
 
     .c-skills-item-img {
       @apply w-full h-full object-contain p-2.5;
+      user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      pointer-events: none;
     }
 
   }

@@ -6,10 +6,11 @@ import { NavbarComponent } from '@components/navbar/navbar.component';
 import { ProjectsComponent } from '@components/projects/projects.component';
 import { ThemeService } from '@services/theme.service';
 import { SkillsComponent } from "@components/skills/skills.component";
+import { ExperienceComponent } from "@components/experience/experience.component";
 
 @Component({
   selector: 'app-root',
-  imports: [HeroComponent, NavbarComponent, LinksComponent, ContactComponent, ProjectsComponent, SkillsComponent],
+  imports: [HeroComponent, NavbarComponent, LinksComponent, ContactComponent, ProjectsComponent, SkillsComponent, ExperienceComponent],
   templateUrl: './app.html'
 })
 export class App implements OnInit {

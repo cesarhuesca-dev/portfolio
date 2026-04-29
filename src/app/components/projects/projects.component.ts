@@ -1,8 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import {NgOptimizedImage} from '@angular/common';
+// import {NgOptimizedImage} from '@angular/common';
+import { ImageModule } from 'primeng/image';
+
 @Component({
   selector: 'app-projects',
-  imports: [NgOptimizedImage],
+  imports: [ImageModule],
   templateUrl: './projects.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

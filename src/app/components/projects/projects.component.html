@@ -14,7 +14,8 @@
 
           @if (item.banner) {
             <div class="c-projects-item-img">
-              <img [ngSrc]="'/assets/img/' + item.banner" width="400" height="100" priority />
+              <!-- <img [ngSrc]="'/assets/img/' + item.banner" width="400" height="100" priority /> -->
+              <p-image [src]="'/assets/img/' + item.banner" alt="Image" width="400"  [preview]="true" appendTo="body" />
             </div>
           }
 

@@ -1,0 +1,178 @@
+.c-experience {
+
+  @apply mb-20;
+
+  .c-experience-title {
+    @apply p-8 mb-5 flex justify-center items-center;
+
+    .c-experience-title-text {
+      @apply text-center font-bold text-6xl md:text-[100px] tracking-tighter leading-[0.9];
+    }
+
+    .c-experience-title-blur {
+      @apply
+      absolute
+      w-[70%]
+      h-[6%]
+      dark:bg-blue-500/20
+      bg-gray-500/30
+      blur-[110px]
+      -z-1
+      rounded-full;
+    }
+  }
+
+  .c-experience-container {
+    @apply grid grid-cols-1 gap-3;
+  }
+
+  .c-experience-item {
+
+    @apply
+    w-full
+    max-w-3xl
+    mx-auto
+    bg-slate-900
+    border
+    border-slate-800
+    rounded-2xl
+    p-6 md:p-8
+    hover:bg-slate-800/80
+    transition-all
+    duration-500
+    ease-out
+    hover:-translate-y-2
+    shadow-lg
+    hover:shadow-blue-500/10
+    dark:hover:shadow-white/5
+    overflow-hidden
+    hover:scale-[1.02]
+    cursor-default;
+
+
+    .c-projects-item-body {
+      @apply z-10 flex flex-col md:flex-row gap-6 md:gap-8
+    }
+
+    .c-projects-item-logo-container {
+      @apply
+      w-16
+      h-16
+      md:w-20
+      md:h-20
+      rounded-2xl
+      bg-white
+      border
+      border-slate-700
+      flex
+      items-center
+      justify-center
+      shadow-inner
+      transition-all
+      duration-500
+      ease-out
+      active:scale-120!;
+
+      img {
+
+        @apply cursor-pointer p-2;
+
+        user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+      }
+    }
+
+    .c-projects-item-content {
+
+      .c-projects-item-content-header {
+        @apply flex flex-col md:flex-row md:justify-between md:items-start mb-4;
+
+        .c-projects-item-content-time {
+          @apply
+          px-3
+          py-1
+          rounded-full
+          text-xs
+          font-semibold
+          tracking-wide
+          bg-slate-800
+          text-slate-300
+          border
+          border-slate-700
+          transition-colors
+          duration-300
+          mt-3
+          md:mt-0
+          whitespace-nowrap;
+        }
+      }
+
+      .c-projects-item-content-job {
+        @apply text-xl md:text-2xl font-bold text-white transition-colors duration-300;
+      }
+
+      .c-projects-item-content-company {
+        @apply text-slate-400 font-medium text-sm md:text-base mt-1;
+      }
+
+      .c-projects-item-content-description {
+        @apply text-slate-300 leading-relaxed text-sm md:text-base mb-6;
+      }
+
+      .c-projects-item-content-skills {
+        @apply flex flex-wrap gap-2;
+      }
+
+    }
+
+
+    .c-projects-item-chip {
+      @apply
+      px-3
+      py-1
+      text-xs
+      font-medium
+      text-slate-300
+      bg-slate-800/50
+      rounded-lg
+      border
+      border-slate-700/50
+      transition-all
+      duration-300
+      cursor-pointer
+      active:scale-105
+      active:rotate-2;
+
+      user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+    }
+
+
+
+
+  }
+
+  .c-experience-item:hover {
+
+
+    .c-projects-item-logo-container {
+      @apply scale-110 rotate-3 border-blue-500/50! shadow-blue-500/20!
+    }
+
+    .c-projects-item-content-job {
+      @apply text-blue-400
+    }
+
+    .c-projects-item-content-time {
+      @apply border-blue-500/30! text-blue-300!;
+    }
+
+    .c-projects-item-chip {
+      @apply bg-blue-500/10! text-blue-400! border-blue-500/30!
+    }
+  }
+
+
+}

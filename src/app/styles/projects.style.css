@@ -31,14 +31,16 @@
 
     border
     border-black/10
-    dark:border-slate-100/10
+    dark:border-slate-800
     rounded-4xl
     overflow-hidden
     transition-all
+    shadow-lg
     hover:scale-[1.02]
-    hover:shadow-xl
     hover:shadow-black/10
-    dark:hover:shadow-white/5;
+    dark:hover:shadow-white/5
+    duration-500
+    ease-out;
 
     .c-projects-item-body {
       @apply
@@ -46,7 +48,7 @@
       flex
       flex-col
       bg-white
-      dark:bg-black
+      dark:bg-slate-800/50
     }
 
     .c-projects-item-header {
@@ -100,11 +102,11 @@
       @apply flex flex-col pl-8 pr-8;
 
       .c-projects-item-content-title {
-        @apply text-2xl font-bold mb-3;
+        @apply text-2xl mb-3 font-bold text-white transition-colors duration-300;
       }
 
       .c-projects-item-content-description {
-        @apply text-sm opacity-50 mb-6;
+        @apply text-sm  mb-6 text-slate-300;
       }
 
     }
@@ -136,7 +138,7 @@
   .c-projects-item:hover {
 
     .c-projects-item-content-title {
-      @apply text-blue-500 transition-colors duration-300;
+      @apply text-blue-400 transition-colors duration-300;
     }
 
     .c-projects-item-footer-icon {
