@@ -36,8 +36,10 @@
     from-black/80
     to-slate-700
 
+    cursor-pointer
+    active:scale-110
     bg-clip-text
-    text-transparent
+    text-transparent;
   }
 
   .c-navbar-link-buttons-container {
@@ -45,7 +47,7 @@
   }
 
   .c-navbar-link {
-    @apply hover:opacity-20 active:scale-90 transition-all;
+    @apply hover:opacity-20 active:scale-90 transition-all cursor-pointer;
   }
 }
 
@@ -57,7 +59,7 @@
   }
 
   .c-navbar-button-lang {
-    @apply opacity-60 hover:opacity-100 transition-opacity flex items-center gap-1;
+    @apply opacity-60 hover:opacity-100 transition-opacity flex items-center gap-1 active:scale-115;
 
     .c-navbar-button-lang-text {
       @apply text-sm font-semibold uppercase;
@@ -65,7 +67,7 @@
   }
 
   .c-navbar-button-theme {
-    @apply opacity-60 hover:opacity-100 transition-opacity;
+    @apply opacity-60 hover:opacity-100 transition-opacity active:scale-115;
   }
 
   .c-navbar-button-cv {

@@ -1,37 +1,47 @@
 .c-links {
   @apply
-  py-15
+  py-10
   border-t
   border-slate-200
   dark:border-white/5
-  opacity-60
-
-  flex
-  flex-col
-  items-center
-  justify-around
-  gap-10
-  md:flex-row
-  md:gap-0
-
   text-xs
   uppercase
-  tracking-[0.3em];
+  tracking-[0.3em]
+  mt-10;
+
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
 
   .c-links-container {
-    @apply flex flex-col gap-2 items-center justify-center;
+    @apply flex flex-col gap-6 items-center justify-center;
   }
 
   .c-links-name {
-    @apply text-sm;
+
+    @apply active:scale-110 cursor-pointer transition;
+
+    h1 {
+      @apply text-xl opacity-95 text-center;
+    }
+
+    h2 {
+      @apply text-sm opacity-60 text-center;
+    }
   }
 
+
   .c-links-links-container {
-    @apply flex gap-2;
+    @apply flex justify-center space-x-6;
   }
 
   .c-links-link {
-    @apply hover:text-blue-500 active:scale-95;
+    @apply hover:text-blue-500 active:scale-110 opacity-60 transition;
+    -webkit-user-drag: none;
+  }
+
+  .c-links-copy {
+    @apply opacity-60;
   }
 
 
