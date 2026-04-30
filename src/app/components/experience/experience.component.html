@@ -1,3 +1,4 @@
+<!-- eslint-disable @angular-eslint/template/prefer-ngsrc -->
 <section class="c-experience">
 
   <div class="c-experience-title">
@@ -11,9 +12,9 @@
       <div class="c-projects-item-body">
 
         <div>
-          <div class="c-projects-item-logo-container " (click)="openWindow('https://www.indragroup.com/es')">
-            <img src='assets/logos/indra.svg'>
-          </div>
+          <button type="button" class="c-projects-item-logo-container " (click)="openWindow('https://www.indragroup.com/es')">
+            <img src='assets/logos/indra.svg' alt="Indra Logo">
+          </button>
         </div>
 
         <div class="c-projects-item-content">
@@ -30,23 +31,23 @@
           <p class="c-projects-item-content-description">{{'experience.job-1.description' | translate}}.</p>
 
           <ul class="c-projects-item-content-skills">
-            <li class="c-projects-item-chip" (click)="openWindow('https://angular.dev/')">
-              <span>{{'technology.angular' | translate}}</span>
+            <li class="c-projects-item-chip">
+              <a href="https://angular.dev/" target="_blank" rel="noopener noreferrer">{{'technology.angular' | translate}}</a>
             </li>
-            <li class="c-projects-item-chip" (click)="openWindow('https://primeng.org/')">
-              <span>{{'technology.primeng' | translate}}</span>
+            <li class="c-projects-item-chip">
+              <a href="https://primeng.org/" target="_blank" rel="noopener noreferrer">{{'technology.primeng' | translate}}</a>
             </li>
-            <li class="c-projects-item-chip" (click)="openWindow('https://dhtmlx.com/')">
-              <span>{{'technology.dhtmlx' | translate}}</span>
+            <li class="c-projects-item-chip">
+              <a href="https://dhtmlx.com/" target="_blank" rel="noopener noreferrer">{{'technology.dhtmlx' | translate}}</a>
             </li>
-            <li class="c-projects-item-chip" (click)="openWindow('https://leafletjs.com/')">
-              <span>{{'technology.leaflet' | translate}}</span>
+            <li class="c-projects-item-chip">
+              <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">{{'technology.leaflet' | translate}}</a>
             </li>
-            <li class="c-projects-item-chip" (click)="openWindow('https://learn.microsoft.com/es-es/dotnet/framework/get-started/')">
-              <span>{{'technology.net' | translate}}</span>
+            <li class="c-projects-item-chip">
+              <a href="https://learn.microsoft.com/es-es/dotnet/framework/get-started/" target="_blank" rel="noopener noreferrer">{{'technology.net' | translate}}</a>
             </li>
-            <li class="c-projects-item-chip" (click)="openWindow('https://www.postgresql.org/')">
-              <span>{{'technology.postgresql' | translate}}</span>
+            <li class="c-projects-item-chip">
+              <a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer">{{'technology.postgresql' | translate}}</a>
             </li>
           </ul>
 

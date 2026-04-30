@@ -1,33 +1,32 @@
 <nav class="c-navbar">
   <div class="c-navbar-container">
     <div class="c-navbar-links-container">
-        <span class="c-navbar-link-title" (click)="goToSection('hero')">{{'navbar.title' | translate}}</span>
+        <button type="button" class="c-navbar-link-title" (click)="goToSection('hero')">{{'navbar.title' | translate}}</button>
         <div class="c-navbar-link-buttons-container">
-          <button class="c-navbar-link" (click)="goToSection('experience')">{{'navbar.links.experience' | translate}}</button>
-          <button class="c-navbar-link" (click)="goToSection('skills')">{{'navbar.links.skills' | translate}}</button>
-          <button class="c-navbar-link" (click)="goToSection('projects')">{{'navbar.links.projects' | translate}}</button>
-          <button class="c-navbar-link" (click)="goToSection('contact')">{{'navbar.links.contact' | translate}}</button>
+          <button type="button" class="c-navbar-link" (click)="goToSection('experience')">{{'navbar.links.experience' | translate}}</button>
+          <button type="button" class="c-navbar-link" (click)="goToSection('skills')">{{'navbar.links.skills' | translate}}</button>
+          <button type="button" class="c-navbar-link" (click)="goToSection('projects')">{{'navbar.links.projects' | translate}}</button>
+          <button type="button" class="c-navbar-link" (click)="goToSection('contact')">{{'navbar.links.contact' | translate}}</button>
         </div>
     </div>
     <div class="c-navbar-buttons-container">
       <!-- LANGUGAE BTN -->
-      <button (click)="toggleLanguage()" class="c-navbar-button-lang">
+      <button type="button" (click)="toggleLanguage()" class="c-navbar-button-lang">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-            d="M12 21a9 9 0 100-18 9 9 0 000 18zm0 0c2.5-2.5 4-6 4-9s-1.5-6.5-4-9m0 18c-2.5-2.5-4-6-4-9s1.5-6.5 4-9">
-          </path>
+            d="M12 21a9 9 0 100-18 9 9 0 000 18zm0 0c2.5-2.5 4-6 4-9s-1.5-6.5-4-9m0 18c-2.5-2.5-4-6-4-9s1.5-6.5 4-9" />
         </svg>
         <span class="c-navbar-button-lang-text ">{{this.userLang()}}</span>
       </button>
       <!-- THEME BTN -->
-      <button (click)="toggleDarkMode()" class="c-navbar-button-theme">
+      <button type="button" (click)="toggleDarkMode()" class="c-navbar-button-theme">
         @if (this.darkMode()) {
           <svg  class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
           </svg>
         } @else {
           <svg  class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M14 12a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M14 12a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
         }
       </button>

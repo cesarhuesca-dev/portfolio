@@ -9,11 +9,9 @@ import { NavigateService } from '@services/navigate.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LinksComponent {
-
   private readonly navigateService = inject(NavigateService);
 
   goToSection(sectionId: string) {
     this.navigateService.goToSection(sectionId);
   }
-
 }

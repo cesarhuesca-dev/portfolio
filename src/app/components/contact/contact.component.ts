@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
-import {email, form, FormField, required} from '@angular/forms/signals';
+import { email, form, FormField, required } from '@angular/forms/signals';
 import { CommonModule, NgClass } from '@angular/common';
 import { EmailService } from '@services/email.service';
 import { environment } from '@environment/environment';
@@ -12,7 +12,6 @@ import { environment } from '@environment/environment';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactComponent {
-
   readonly emailService = inject(EmailService);
 
   private readonly defaultData = {
@@ -20,16 +19,16 @@ export class ContactComponent {
     subject: '',
     email: '',
     message: '',
-    website: ''
-  }
+    website: '',
+  };
 
-  readonly contactFormModel = signal(this.defaultData)
+  readonly contactFormModel = signal(this.defaultData);
   readonly contactForm = form(this.contactFormModel, (schemaPath) => {
-    required(schemaPath.name, {message: 'Name is required'});
-    required(schemaPath.subject, {message: 'Subject is required'});
-    required(schemaPath.email, {message: 'Email is required'});
-    email(schemaPath.email, {message: 'Email is not email'});
-    required(schemaPath.message, {message: 'Message is required'});
+    required(schemaPath.name, { message: 'Name is required' });
+    required(schemaPath.subject, { message: 'Subject is required' });
+    required(schemaPath.email, { message: 'Email is required' });
+    email(schemaPath.email, { message: 'Email is not email' });
+    required(schemaPath.message, { message: 'Message is required' });
   });
 
   readonly loading = signal<boolean>(false);
@@ -41,7 +40,6 @@ export class ContactComponent {
   private readonly formStartTime = Date.now();
 
   sendEmail() {
-
     if (this.contactForm().invalid() || this.isSpam()) return;
 
     this.loading.update(() => true);
@@ -49,12 +47,13 @@ export class ContactComponent {
     this.error.update(() => false);
 
     const { website, ...rest } = this.contactForm().value();
+    void website;
 
     this.emailService.sendEmail(rest).subscribe({
       next: (res) => {
-        if(res.status === 200){
+        if (res.status === 200) {
           this.showSuccessToast();
-        }else {
+        } else {
           this.showErrorToast();
         }
       },
@@ -64,17 +63,16 @@ export class ContactComponent {
 
         setTimeout(() => {
           this.clearForm();
-
         }, 2000);
       },
     });
   }
 
-  clearForm(){
+  clearForm() {
     this.loading.update(() => false);
     this.success.update(() => false);
     this.error.update(() => false);
-    this.contactFormModel.update(() => (this.defaultData))
+    this.contactFormModel.update(() => this.defaultData);
     this.contactForm().reset();
   }
 
@@ -87,7 +85,6 @@ export class ContactComponent {
 
   copyEmail() {
     navigator.clipboard.writeText(environment.email).then(() => {
-
       this.showToastEmail.update(() => true);
       setTimeout(() => {
         this.showToastEmail.update(() => false);
@@ -96,10 +93,10 @@ export class ContactComponent {
   }
 
   showSuccessToast() {
-  this.success.set(true);
-  this.error.set(false);
-  this.triggerToast();
-}
+    this.success.set(true);
+    this.error.set(false);
+    this.triggerToast();
+  }
 
   showErrorToast() {
     this.success.set(false);
@@ -114,5 +111,4 @@ export class ContactComponent {
       this.showToastMessage.set(false);
     }, 2500);
   }
-
 }

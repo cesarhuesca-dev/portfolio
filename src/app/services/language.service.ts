@@ -2,28 +2,28 @@ import { inject, Injectable, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 export enum LanguageModes {
+  // eslint-disable-next-line no-unused-vars
   es = 'es',
-  en = 'en'
+  // eslint-disable-next-line no-unused-vars
+  en = 'en',
 }
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class LanguageService {
-
   private readonly topicLang = 'language';
 
   private readonly translate = inject(TranslateService);
 
   private readonly userLang = signal<LanguageModes>(LanguageModes.es);
 
-  get lang(){
+  get lang() {
     return this.userLang();
   }
 
-  initLang(){
+  initLang() {
+    const lang = localStorage.getItem(this.topicLang);
 
-    const lang = localStorage.getItem(this.topicLang)
-
-    if(!lang){
+    if (!lang) {
       this.setLanguage(LanguageModes.es);
       return;
     }
@@ -31,8 +31,7 @@ export class LanguageService {
     this.setLanguage(lang);
   }
 
-  setLanguage(language : string){
-
+  setLanguage(language: string) {
     const lang = language as LanguageModes;
 
     this.translate.setFallbackLang(lang);
@@ -42,11 +41,10 @@ export class LanguageService {
   }
 
   toggleLang() {
-    if(this.userLang() ===  LanguageModes.en){
+    if (this.userLang() === LanguageModes.en) {
       this.setLanguage(LanguageModes.es);
-    }else {
+    } else {
       this.setLanguage(LanguageModes.en);
     }
   }
-
 }

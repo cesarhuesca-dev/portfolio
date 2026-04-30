@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { DownloadService } from '@services/download.service';
 import { LanguageModes, LanguageService } from '@services/language.service';
@@ -12,9 +12,7 @@ import { ThemeService } from '@services/theme.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
-
-
-  private readonly themeService = inject(ThemeService)
+  private readonly themeService = inject(ThemeService);
   private readonly languageService = inject(LanguageService);
   private readonly downloadService = inject(DownloadService);
   private readonly navigateService = inject(NavigateService);
@@ -40,4 +38,3 @@ export class NavbarComponent {
     this.downloadService.downloadCV(this.userLang());
   }
 }
-

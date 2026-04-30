@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import {NgOptimizedImage} from '@angular/common';
 import { ImageModule } from 'primeng/image';
 import { TranslatePipe } from '@ngx-translate/core';
 
@@ -10,9 +9,7 @@ import { TranslatePipe } from '@ngx-translate/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ExperienceComponent {
-
   openWindow(url: string) {
-    window.open(url)
+    window.open(url);
   }
-
 }

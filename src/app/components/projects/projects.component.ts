@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
-// import {NgOptimizedImage} from '@angular/common';
 import { ImageModule } from 'primeng/image';
 
 @Component({
@@ -10,8 +9,6 @@ import { ImageModule } from 'primeng/image';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectsComponent {
-
-
   projects = [
     {
       id: 1,
@@ -20,7 +17,7 @@ export class ProjectsComponent {
       status: 'projects.project-1.status',
       statusClass: 'c-projects-item-header-status-finished',
       banner: 'impostor-game-es.png',
-      repo: 'https://github.com/cesarhuesca-dev/impostor-game-infra'
+      repo: 'https://github.com/cesarhuesca-dev/impostor-game-infra',
     },
     {
       id: 2,
@@ -29,12 +26,10 @@ export class ProjectsComponent {
       status: 'projects.project-2.status',
       statusClass: 'c-projects-item-header-status-inprogress',
       banner: 'restaurant-banner-es.png',
-
-    }
-  ]
+    },
+  ];
 
   goToGithub(url: string) {
-    window.open(url)
+    window.open(url);
   }
-
 }

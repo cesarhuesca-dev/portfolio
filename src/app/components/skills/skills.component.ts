@@ -7,6 +7,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class SkillsComponent {
   openWindow(url: string) {
-    window.open(url)
+    window.open(url);
   }
 }

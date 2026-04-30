@@ -7,4 +7,4 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './hero.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeroComponent { }
+export class HeroComponent {}

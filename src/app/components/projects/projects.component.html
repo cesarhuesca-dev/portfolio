@@ -26,12 +26,12 @@
           </div>
 
           @if(item.repo){
-            <div class="c-projects-item-footer" (click)="goToGithub(item.repo)">
+            <button type="button" class="c-projects-item-footer" (click)="goToGithub(item.repo)">
               <span class="c-projects-item-footer-title">{{'projects.github' | translate}}</span>
               <svg class="c-projects-item-footer-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
-            </div>
+            </button>
           }
 
         </div>
