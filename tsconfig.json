@@ -7,6 +7,7 @@
       "@styles/*": ["./src/app/styles/*"],
       "@services/*": ["./src/app/services/*"],
       "@components/*": ["./src/app/components/*"],
+      "@environment/*": ["./src/environments/*"],
     },
     "strict": true,
     "noImplicitOverride": true,

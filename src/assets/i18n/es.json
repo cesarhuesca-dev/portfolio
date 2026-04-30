@@ -48,7 +48,12 @@
     "send" : "Enviar mensaje",
     "placeholder-name" : "Nombre",
     "placeholder-email" : "Email",
-    "placeholder-message" : "Mensaje"
+    "placeholder-subject" : "Asunto",
+    "placeholder-message" : "Mensaje",
+    "sending" : "Enviando mensaje...",
+    "clipboard" : "Copiado al portapapeles",
+    "message-success" : "Mensaje enviado correctamente",
+    "message-error" : "Error al enviar. Inténtalo de nuevo"
   },
   "links" : {
     "name" : "Cesar Huesca",

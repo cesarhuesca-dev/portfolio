@@ -48,7 +48,12 @@
     "send" : "Send message",
     "placeholder-name" : "Name",
     "placeholder-email" : "Email",
-    "placeholder-message" : "Message"
+    "placeholder-subject" : "Subject",
+    "placeholder-message" : "Message",
+    "sending" : "Sending message...",
+    "clipboard" : "Copied to clipboard",
+    "message-success" : "Message sent successfully",
+    "message-error" : "Error sending. Please try again"
   },
   "links" : {
     "name" : "Cesar Huesca",

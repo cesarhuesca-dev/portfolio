@@ -6,7 +6,7 @@
           <h2 class="c-contact-card-content-title">{{'contact.talk-1' | translate}} <br> {{'contact.talk-2' | translate}}.</h2>
           <p class="c-contact-card-content-description">{{'contact.description' | translate}}.</p>
 
-          <div class="c-contact-card-content-email">
+          <div class="c-contact-card-content-email" (click)="copyEmail()">
               <div class="c-contact-card-content-email-icon">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -18,13 +18,86 @@
         <div>
           <form class="c-contact-card-form">
             <div class="c-contact-card-form-inputs-container">
-                <input type="text" placeholder="{{'contact.placeholder-name' | translate}}" class="c-contact-card-form-input">
-                <input type="email" placeholder="{{'contact.placeholder-email' | translate}}" class="c-contact-card-form-input">
+                <input [formField]="this.contactForm.website" type="text" class="hidden">
+                <input type="text"
+                  class="c-contact-card-form-input"
+                  placeholder="{{'contact.placeholder-name' | translate}}"
+                  [formField]="this.contactForm.name"
+                  [ngClass]="{'c-contact-card-form-input-error': this.contactForm.name().invalid() && this.contactForm.name().touched()}">
+                <input type="email"
+                  class="c-contact-card-form-input"
+                  inputmode="email"
+                  autocomplete="email"
+                  placeholder="{{'contact.placeholder-email' | translate}}"
+                  [formField]="this.contactForm.email"
+                  [ngClass]="{'c-contact-card-form-input-error': this.contactForm.email().invalid() && this.contactForm.email().touched()}">
+                <input type="text"
+                  class="c-contact-card-form-input"
+                  placeholder="{{'contact.placeholder-subject' | translate}}"
+                  [formField]="this.contactForm.subject"
+                  [ngClass]="{'c-contact-card-form-input-error': this.contactForm.subject().invalid() && this.contactForm.subject().touched()}">
             </div>
-            <textarea placeholder="{{'contact.placeholder-message' | translate}}" class="c-contact-card-form-textarea"></textarea>
-            <button class="c-contact-card-form-button">{{'contact.send' | translate}}</button>
+            <textarea
+              class="c-contact-card-form-textarea"
+              placeholder="{{'contact.placeholder-message' | translate}}"
+              [formField]="this.contactForm.message"
+              [ngClass]="{'c-contact-card-form-input-error': this.contactForm.message().invalid() && this.contactForm.message().touched()}">
+            </textarea>
+            <button type="button" class="c-contact-card-form-button"
+              [disabled]="this.contactForm().invalid() || this.loading()"
+              [ngClass]="{'c-contact-card-form-button-disabled' : this.contactForm().invalid() || this.loading() }"
+              (click)="sendEmail()">
+              @if (this.loading()) {
+                <div class="flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5 animate-spin" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" stroke="white" stroke-width="4" fill="none" opacity="0.3"/>
+                    <path d="M22 12a10 10 0 00-10-10" stroke="white" stroke-width="4"/>
+                  </svg>
+                  <span>{{'contact.sending' | translate}}</span>
+                </div>
+              } @else {
+                <span>{{'contact.send' | translate}}</span>
+              }
+            </button>
+
+
           </form>
         </div>
       </div>
+  </div>
+
+  <div class="c-contact-clipboard c-contact-clipboard-toast" [ngClass]="{'hidden' : !showToastEmail()}">
+    <span> 📋 </span>
+    <span>{{'contact.clipboard' | translate}}</span>
+  </div>
+
+  <div class="c-contact-message-toast"
+    [ngClass]="{
+      'c-contact-message-toast-show': showToastMessage(),
+      'c-contact-message-toast-success': success(),
+      'c-contact-message-toast-error': error()
+    }">
+    <div class="c-contact-message-toast-body">
+      <div>
+        @if (success()) {
+          <svg class="w-6 h-6 icon-pop" viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <circle cx="12" cy="12" r="10" class="stroke-green-400"/>
+            <path d="M8 12l3 3 5-6" class="stroke-green-400"/>
+          </svg>
+        }
+        @if (error()) {
+          <svg class="w-6 h-6 icon-pop" viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <circle cx="12" cy="12" r="10" class="stroke-red-400"/>
+            <path d="M9 9l6 6M15 9l-6 6" class="stroke-red-400"/>
+          </svg>
+        }
+      </div>
+      @if (success()) {
+        <span>{{  'contact.message-success' | translate }}</span>
+      }
+      @if (error()) {
+        <span>{{'contact.message-error' | translate }}</span>
+      }
+    </div>
   </div>
 </section>
