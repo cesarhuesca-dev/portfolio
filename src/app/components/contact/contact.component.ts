@@ -4,10 +4,11 @@ import { email, form, FormField, required } from '@angular/forms/signals';
 import { CommonModule, NgClass } from '@angular/common';
 import { EmailService } from '@services/email.service';
 import { environment } from '@environment/environment';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
   selector: 'app-contact',
-  imports: [TranslatePipe, FormField, NgClass, CommonModule],
+  imports: [TranslatePipe, FormField, NgClass, CommonModule, AnimateOnScrollModule],
   templateUrl: './contact.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

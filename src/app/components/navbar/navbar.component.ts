@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/c
 import { TranslatePipe } from '@ngx-translate/core';
 import { DownloadService } from '@services/download.service';
 import { LanguageModes, LanguageService } from '@services/language.service';
-import { NavigateService } from '@services/navigate.service';
+import { NavigateService, PortfolioSections } from '@services/navigate.service';
 import { ThemeService } from '@services/theme.service';
 
 @Component({
@@ -22,6 +22,7 @@ export class NavbarComponent {
   readonly userLang = computed(() => this.languageService.lang);
 
   readonly languageModes = LanguageModes;
+  readonly portfolioSections = PortfolioSections;
 
   toggleDarkMode() {
     this.themeService.toggleTheme();
@@ -31,8 +32,8 @@ export class NavbarComponent {
     this.languageService.toggleLang();
   }
 
-  goToSection(sectionId: string) {
-    this.navigateService.goToSection(sectionId);
+  goToSection(sectionId: PortfolioSections) {
+    this.navigateService.goToSection(PortfolioSections[sectionId]);
   }
 
   downloadCv() {

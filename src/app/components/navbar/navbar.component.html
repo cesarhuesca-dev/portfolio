@@ -1,14 +1,14 @@
 <nav class="c-navbar">
   <div class="c-navbar-container">
     <div class="c-navbar-links-container">
-        <button type="button" class="c-navbar-link-title" (click)="goToSection('hero')">
+        <button type="button" class="c-navbar-link-title" (click)="goToSection(portfolioSections.hero)">
           <img [ngSrc]="'/assets/brand/chdev-logo.png'" class="c-navbar-link-logo" alt="" width="100" height="50" priority>
         </button>
         <div class="c-navbar-link-buttons-container">
-          <button type="button" class="c-navbar-link" (click)="goToSection('experience')">{{'navbar.links.experience' | translate}}</button>
-          <button type="button" class="c-navbar-link" (click)="goToSection('skills')">{{'navbar.links.skills' | translate}}</button>
-          <button type="button" class="c-navbar-link" (click)="goToSection('projects')">{{'navbar.links.projects' | translate}}</button>
-          <button type="button" class="c-navbar-link" (click)="goToSection('contact')">{{'navbar.links.contact' | translate}}</button>
+          <button type="button" class="c-navbar-link" (click)="goToSection(portfolioSections.experience)">{{'navbar.links.experience' | translate}}</button>
+          <button type="button" class="c-navbar-link" (click)="goToSection(portfolioSections.skills)">{{'navbar.links.skills' | translate}}</button>
+          <button type="button" class="c-navbar-link" (click)="goToSection(portfolioSections.projects)">{{'navbar.links.projects' | translate}}</button>
+          <button type="button" class="c-navbar-link" (click)="goToSection(portfolioSections.contact)">{{'navbar.links.contact' | translate}}</button>
         </div>
     </div>
     <div class="c-navbar-buttons-container">

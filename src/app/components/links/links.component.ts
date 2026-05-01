@@ -1,7 +1,7 @@
 import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
-import { NavigateService } from '@services/navigate.service';
+import { NavigateService, PortfolioSections } from '@services/navigate.service';
 
 @Component({
   selector: 'app-links',
@@ -11,8 +11,9 @@ import { NavigateService } from '@services/navigate.service';
 })
 export class LinksComponent {
   private readonly navigateService = inject(NavigateService);
+  readonly portfolioSections = PortfolioSections;
 
-  goToSection(sectionId: string) {
+  goToSection(sectionId: PortfolioSections) {
     this.navigateService.goToSection(sectionId);
   }
 }

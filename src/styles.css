@@ -12,6 +12,7 @@
 @import "./app/styles/contact.style.css";
 @import "./app/styles/scrollbar.style.css";
 @import "./app/styles/mouse.style.css";
+@import "./app/styles/animations.style.css";
 
 
 @custom-variant dark (&:where(.dark, .dark *));
