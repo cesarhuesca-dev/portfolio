@@ -11,6 +11,7 @@
 @import "./app/styles/skills.style.css";
 @import "./app/styles/contact.style.css";
 @import "./app/styles/scrollbar.style.css";
+@import "./app/styles/mouse.style.css";
 
 
 @custom-variant dark (&:where(.dark, .dark *));

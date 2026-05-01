@@ -21,7 +21,7 @@ export class LanguageService {
   }
 
   initLang() {
-    const lang = localStorage.getItem(this.topicLang);
+    const lang = this.getLocalStorageLang();
 
     if (!lang) {
       this.setLanguage(LanguageModes.es);
@@ -31,12 +31,26 @@ export class LanguageService {
     this.setLanguage(lang);
   }
 
+  getLocalStorageLang() {
+    const lang = localStorage.getItem(this.topicLang);
+
+    if (!lang) {
+      return LanguageModes.es;
+    }
+
+    return lang;
+  }
+
+  setLocalStorageLang(lang: string) {
+    localStorage.setItem(this.topicLang, lang);
+  }
+
   setLanguage(language: string) {
     const lang = language as LanguageModes;
 
     this.translate.setFallbackLang(lang);
     this.translate.use(lang);
-    localStorage.setItem(this.topicLang, LanguageModes[lang]);
+    this.setLocalStorageLang(LanguageModes[lang]);
     this.userLang.update(() => LanguageModes[lang]);
   }
 

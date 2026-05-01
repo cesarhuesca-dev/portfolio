@@ -1,0 +1,9 @@
+.mouse-follower-circle {
+
+  @apply fixed top-0 left-0 rounded-full w-10 h-10 z-50 pointer-events-none bg-blue-700/50 transform ease-out duration-200;
+
+  &.mouse-circle-click {
+    @apply w-9 h-9;
+  }
+
+}

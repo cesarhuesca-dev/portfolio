@@ -20,18 +20,17 @@ export class ThemeService {
   }
 
   initTheme() {
-    const theme = localStorage.getItem(this.topicTheme);
+    const theme = this.getLocalStorageLang();
 
-    if (!theme || theme === ThemeModes.light) {
-      this.setLigthTheme();
+    if (!theme || theme === ThemeModes.dark) {
+      this.setDarkTheme();
       return;
     }
-
-    this.setDarkTheme();
+    this.setLigthTheme();
   }
 
   toggleTheme() {
-    const theme = localStorage.getItem(this.topicTheme)!;
+    const theme = this.getLocalStorageLang();
 
     if (theme === ThemeModes.light) {
       this.setDarkTheme();
@@ -43,16 +42,33 @@ export class ThemeService {
   }
 
   setLigthTheme() {
-    document.documentElement.classList.remove(this.topicDarkTheme);
-    document.documentElement.classList.add(this.topicLightTheme);
-    localStorage.setItem(this.topicTheme, ThemeModes.light);
+    this.setDocumentClass(this.topicDarkTheme, this.topicLightTheme);
+    this.setLocalStorageTheme(ThemeModes.light);
     this.isDarkMode.update(() => false);
   }
 
   setDarkTheme() {
-    document.documentElement.classList.remove(this.topicLightTheme);
-    document.documentElement.classList.add(this.topicDarkTheme);
-    localStorage.setItem(this.topicTheme, ThemeModes.dark);
+    this.setDocumentClass(this.topicLightTheme, this.topicDarkTheme);
+    this.setLocalStorageTheme(ThemeModes.dark);
     this.isDarkMode.update(() => true);
+  }
+
+  getLocalStorageLang() {
+    const theme = localStorage.getItem(this.topicTheme);
+
+    if (!theme) {
+      return this.topicDarkTheme;
+    }
+
+    return theme;
+  }
+
+  setLocalStorageTheme(theme: string) {
+    localStorage.setItem(this.topicTheme, theme);
+  }
+
+  setDocumentClass(oldClass: string, newClass: string) {
+    document.documentElement.classList.remove(oldClass);
+    document.documentElement.classList.add(newClass);
   }
 }
