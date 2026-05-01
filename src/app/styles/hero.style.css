@@ -1,5 +1,5 @@
 .c-hero {
-  @apply text-center mb-40;
+  @apply text-center mb-20;
 }
 
 .c-hero-title {
@@ -64,6 +64,82 @@
     hover:opacity-70
     active:scale-95
     transition-all;
+  }
+}
+
+.c-hero-photo {
+  @apply relative inline-block;
+
+  .c-hero-photo-glow {
+    @apply absolute
+    inset-0
+    rounded-full
+    bg-blue-500
+    blur-2xl
+    opacity-20
+    transition-opacity
+    duration-500;
+  }
+
+  .c-hero-photo-pulse {
+    @apply absolute
+    inset-0
+    rounded-full
+    border-2
+    border-blue-500/50
+    animate-[ping_3s_infinite];
+  }
+
+  .c-hero-photo-container {
+    @apply relative
+    w-56
+    h-56
+    bg-white
+    rounded-full
+    p-0.5
+    border
+    border-gray-100
+    shadow-inner
+    overflow-hidden;
+
+    img {
+      @apply w-full
+      h-full
+      object-cover
+      rounded-full
+      transition-transform
+      duration-500
+      bg-black/95;
+    }
+  }
+
+  &:hover {
+
+    @apply cursor-pointer;
+
+    .c-hero-photo-glow {
+      @apply opacity-40!;
+    }
+    .c-hero-photo-pulse {
+      @apply animate-none! opacity-0!;
+    }
+
+    .c-hero-photo-container {
+      @apply  scale-110! transition duration-700 ease-in-out;
+    }
+  }
+
+  &:active {
+    .c-hero-photo-glow {
+      @apply opacity-0!;
+    }
+    .c-hero-photo-pulse {
+      @apply animate-none! opacity-0!;
+    }
+
+    .c-hero-photo-container {
+      @apply opacity-60 rotate-5;
+    }
   }
 }
 
