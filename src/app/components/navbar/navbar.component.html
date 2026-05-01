@@ -1,7 +1,9 @@
 <nav class="c-navbar">
   <div class="c-navbar-container">
     <div class="c-navbar-links-container">
-        <button type="button" class="c-navbar-link-title" (click)="goToSection('hero')">{{'navbar.title' | translate}}</button>
+        <button type="button" class="c-navbar-link-title" (click)="goToSection('hero')">
+          <img [ngSrc]="'/assets/brand/chdev-logo.png'" class="c-navbar-link-logo" alt="" width="100" height="50" priority>
+        </button>
         <div class="c-navbar-link-buttons-container">
           <button type="button" class="c-navbar-link" (click)="goToSection('experience')">{{'navbar.links.experience' | translate}}</button>
           <button type="button" class="c-navbar-link" (click)="goToSection('skills')">{{'navbar.links.skills' | translate}}</button>

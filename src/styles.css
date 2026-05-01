@@ -15,3 +15,7 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+img {
+  -webkit-user-drag: none;
+}
+

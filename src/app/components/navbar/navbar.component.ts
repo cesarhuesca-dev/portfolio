@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { DownloadService } from '@services/download.service';
@@ -7,7 +8,7 @@ import { ThemeService } from '@services/theme.service';
 
 @Component({
   selector: 'app-navbar',
-  imports: [TranslatePipe],
+  imports: [TranslatePipe, NgOptimizedImage],
   templateUrl: './navbar.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

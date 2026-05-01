@@ -25,21 +25,20 @@
 
   .c-navbar-link-title {
     @apply
-    text-lg
-    font-bold
-    tracking-tighter
-    bg-linear-to-r
-
-    dark:from-white
-    dark:to-slate-500
-
-    from-black/80
-    to-slate-700
-
+    items-center
+    justify-center
+    gap-1
+    w-15
+    hidden
+    md:flex!
     cursor-pointer
-    active:scale-110
-    bg-clip-text
-    text-transparent;
+    duration-100
+    active:opacity-60
+    transition;
+  }
+
+  .c-navbar-link-logo {
+    @apply absolute object-contain;
   }
 
   .c-navbar-link-buttons-container {

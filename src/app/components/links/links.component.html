@@ -1,41 +1,51 @@
 <footer class="c-links">
   <div class="c-links-container">
 
-    <button type="button" class="c-links-name" (click)="goToSection('hero')">
-      <h1>{{'links.name' | translate}}</h1>
-      <h2>{{'links.job' | translate}}</h2>
-    </button>
+    <div class="c-links-content-container">
+      <div class="c-links-name-container">
+        <img [ngSrc]="'/assets/brand/chdev-logo.png'" class="c-navbar-link-logo" alt="Cesar Huesca" width="100" height="50" priority>
+        <button type="button" class="c-links-name" (click)="goToSection('hero')">
+          <h1>{{'links.name' | translate}}</h1>
+          <h2>{{'links.job' | translate}}</h2>
+        </button>
+      </div>
+      <div class="c-links-links-container">
+        <!-- GitHub -->
+        <a href="https://github.com/cesarhuesca-dev" target="_blank" class="c-links-link">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+            <path d="M12 .5C5.73.5.75 5.48.75 11.75c0 5.11 3.29 9.45 7.86 10.98.57.1.78-.25.78-.55
+            0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7
+            1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.71
+            0-1.26.45-2.3 1.19-3.11-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.19a11.05 11.05 0 0 1 5.8 0c2.21-1.5
+            3.18-1.19 3.18-1.19.63 1.59.23 2.76.11 3.05.74.81 1.19 1.85 1.19 3.11 0 4.44-2.69 5.42-5.26 5.7.41.35.77
+            1.04.77 2.1 0 1.52-.01 2.75-.01 3.13 0 .3.21.65.79.54a11.27 11.27 0 0 0 7.85-10.98C23.25 5.48 18.27.5 12 .5z"/>
+          </svg>
+        </a>
 
-    <div class="c-links-links-container">
-      <!-- GitHub -->
-      <a href="https://github.com/cesarhuesca-dev" target="_blank" class="c-links-link">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 fill-current" viewBox="0 0 24 24">
-          <path d="M12 .5C5.73.5.75 5.48.75 11.75c0 5.11 3.29 9.45 7.86 10.98.57.1.78-.25.78-.55
-          0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7
-          1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.71
-          0-1.26.45-2.3 1.19-3.11-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.19a11.05 11.05 0 0 1 5.8 0c2.21-1.5
-          3.18-1.19 3.18-1.19.63 1.59.23 2.76.11 3.05.74.81 1.19 1.85 1.19 3.11 0 4.44-2.69 5.42-5.26 5.7.41.35.77
-          1.04.77 2.1 0 1.52-.01 2.75-.01 3.13 0 .3.21.65.79.54a11.27 11.27 0 0 0 7.85-10.98C23.25 5.48 18.27.5 12 .5z"/>
-        </svg>
-      </a>
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/cesarhuesca-dev" target="_blank" class="c-links-link">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+            <path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM.5
+            8h4v12h-4V8zm7.5 0h3.6v1.7h.05c.5-.95 1.73-1.95 3.55-1.95C19.4 7.75 21 9.3 21 12.2V20h-4v-6.7c0-1.6-.03-3.65-2.23-3.65-2.24
+            0-2.58 1.75-2.58 3.54V20h-4V8z"/>
+          </svg>
+        </a>
 
-      <!-- LinkedIn -->
-      <a href="https://linkedin.com/in/cesarhuesca-dev" target="_blank" class="c-links-link">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 fill-current" viewBox="0 0 24 24">
-          <path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM.5
-          8h4v12h-4V8zm7.5 0h3.6v1.7h.05c.5-.95 1.73-1.95 3.55-1.95C19.4 7.75 21 9.3 21 12.2V20h-4v-6.7c0-1.6-.03-3.65-2.23-3.65-2.24
-          0-2.58 1.75-2.58 3.54V20h-4V8z"/>
-        </svg>
-      </a>
+        <!-- Email -->
+        <a href="mailto:cesarhuesca.dev@gmail.com" class="c-links-link">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+            <path d="M12 13.065L.015 6.75A2 2 0 0 1 2 5h20a2 2 0 0 1 1.985 1.75L12 13.065zM12 15.435l12-6.315V19a2 2 0 0 1-2
+            2H2a2 2 0 0 1-2-2V9.12l12 6.315z"/>
+          </svg>
+        </a>
+      </div>
 
-      <!-- Email -->
-      <a href="mailto:cesarhuesca.dev@gmail.com" class="c-links-link">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 fill-current" viewBox="0 0 24 24">
-          <path d="M12 13.065L.015 6.75A2 2 0 0 1 2 5h20a2 2 0 0 1 1.985 1.75L12 13.065zM12 15.435l12-6.315V19a2 2 0 0 1-2
-          2H2a2 2 0 0 1-2-2V9.12l12 6.315z"/>
-        </svg>
-      </a>
     </div>
+
+
+
+
+
 
     <div class="c-links-copy">
       <span>{{'links.copy' | translate}}</span>

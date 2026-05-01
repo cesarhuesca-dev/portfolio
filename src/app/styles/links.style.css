@@ -17,16 +17,23 @@
     @apply flex flex-col gap-6 items-center justify-center;
   }
 
+  .c-links-content-container {
+    @apply flex items-center justify-center gap-20 w-full;
+  }
+
+  .c-links-name-container {
+    @apply flex items-center justify-center active:scale-110 active:opacity-60 cursor-pointer transition;
+  }
+
   .c-links-name {
 
-    @apply active:scale-110 cursor-pointer transition;
 
     h1 {
-      @apply text-xl opacity-95 text-center;
+      @apply text-xl opacity-95 text-center cursor-pointer;
     }
 
     h2 {
-      @apply text-sm opacity-60 text-center;
+      @apply text-sm opacity-60 text-center cursor-pointer;
     }
   }
 
@@ -37,7 +44,6 @@
 
   .c-links-link {
     @apply hover:text-blue-500 active:scale-110 opacity-60 transition;
-    -webkit-user-drag: none;
   }
 
   .c-links-copy {
