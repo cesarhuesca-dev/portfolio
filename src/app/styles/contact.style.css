@@ -4,21 +4,30 @@
     @apply
     relative
     overflow-hidden
-    p-12
+    p-8
+    sm:p-12
     md:p-24
     border
-    border-none
     rounded-4xl
-  bg-black/95
-  dark:bg-black/95
+
     hover:scale-[1.02]
     hover:shadow-xl
     hover:shadow-black/30
     dark:hover:shadow-white/5
-    transition-all;
+    transition-all
+
+
+    dark:text-white
+    text-slate-900
+    dark:border-white/5
+    border-black/5
+    dark:bg-black
+    bg-gray-50
+    dark:shadow-white/30
+    shadow-black;
 
     .c-contact-card-container {
-      @apply relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20;
+      @apply relative z-10 grid grid-cols-1 lg:grid-cols-2 md:gap-20 gap-10;
     }
 
     .c-contact-card-form {
@@ -30,19 +39,22 @@
 
       .c-contact-card-form-input {
         @apply
-        bg-white/5
         border
-        border-white/10
         rounded-2xl
         p-5
-        text-white
         focus:outline-none
-        focus:border-blue-500
-        transition-all;
+        focus:border-blue-700!
+        dark:focus:border-blue-500!
+        transition-all
+
+        dark:bg-white/5
+        bg-black/5
+        dark:border-white/10
+        border-black/10
       }
 
       .c-contact-card-form-input-error, textarea.c-contact-card-form-input-error {
-        @apply border-red-900! focus:border-red-900 focus:ring-red-900 text-red-300;
+        @apply border border-red-700 dark:border-red-900 focus:border-red-900 focus:ring-red-900 dark:text-red-500 text-red-800 transition-colors duration-200;
       }
 
       .c-contact-card-form-input:last-child {
@@ -52,34 +64,40 @@
       .c-contact-card-form-textarea {
         @apply
         w-full
-        bg-white/5
         border
-        border-white/10
         rounded-2xl
         p-5
-        text-white
         h-40
         focus:outline-none
-        focus:border-blue-500
-        transition-all;
+        focus:border-blue-700!
+        dark:focus:border-blue-500!
+        transition-all
+
+        dark:bg-white/5
+        bg-black/5
+        dark:border-white/10
+        border-black/10;
       }
 
       .c-contact-card-form-button {
         @apply
         w-full
-        bg-blue-700
-        text-white
-        font-bold
+        font-semibold
         py-5
         rounded-2xl
         hover:bg-blue-500/90
         transition-all
         active:scale-95
-        cursor-pointer;
+        cursor-pointer
+        border
+        bg-blue-400
+        dark:bg-blue-700
+        dark:border-white/10
+        border-black/10;
       }
 
       .c-contact-card-form-button-disabled {
-        @apply opacity-50 cursor-default! active:scale-100! hover:bg-blue-700!;
+        @apply opacity-50 cursor-default! active:scale-100! dark:hover:bg-blue-700! hover:bg-blue-400!;
       }
     }
     .c-contact-card-form-blur {
@@ -89,15 +107,15 @@
     .c-contact-card-content {
 
       .c-contact-card-content-title {
-        @apply text-5xl font-bold tracking-tighter text-white mb-8;
+        @apply text-4xl md:text-5xl font-bold tracking-tighter mb-8;
       }
 
       .c-contact-card-content-description {
-        @apply text-lg text-white/50 leading-relaxed mb-12;
+        @apply text-lg opacity-50 leading-relaxed mb-12;
       }
 
       .c-contact-card-content-email {
-        @apply flex items-center gap-4 text-white/80;
+        @apply flex items-center gap-4 opacity-80;
 
         .c-contact-card-content-email-icon {
           @apply w-12 h-12 rounded-full bg-white/5 flex items-center justify-center transition-colors;
@@ -125,13 +143,21 @@
         }
 
       }
-
-
     }
   }
 
   .c-contact-clipboard {
-    @apply fixed bottom-6 right-6 bg-black text-white px-4 py-2 rounded-lg shadow-lg;
+    @apply fixed
+    bottom-35
+    right-25
+    md:bottom-6
+    md:right-6
+    bg-gray-200
+    dark:bg-gray-900
+    px-4
+    py-2
+    rounded-lg
+    shadow-lg;
 
     &.c-contact-clipboard-toast {
       animation: toastIn 0.3s ease-in-out;
@@ -139,8 +165,17 @@
   }
 
   .c-contact-message-toast {
-    @apply fixed bottom-6 right-6 px-5 py-3 rounded-xl shadow-lg
-          flex items-center gap-3 text-white opacity-0 pointer-events-none;
+    @apply
+    fixed
+    bottom-35
+    right-25
+    md:bottom-6
+    md:right-6
+    px-5
+    py-3
+    rounded-xl
+    shadow-lg
+    flex items-center gap-3 opacity-0 pointer-events-none;
 
     transition: opacity 0.3s ease;
 
@@ -153,11 +188,11 @@
     }
 
     &.c-contact-message-toast-error {
-      @apply bg-red-700!;
+      @apply dark:bg-red-700! bg-red-300!;
     }
 
     &.c-contact-message-toast-success {
-      @apply bg-green-700!;
+      @apply dark:bg-green-700! bg-green-300!;
     }
 
     svg {
