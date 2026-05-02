@@ -3,7 +3,8 @@
 
     <div class="c-links-content-container">
       <div class="c-links-name-container">
-        <img [ngSrc]="'/assets/brand/chdev-logo.png'" class="c-navbar-link-logo" alt="Cesar Huesca" width="100" height="50" priority>
+        <div class="c-links-logo"></div>
+        <!-- <img [ngSrc]="'/assets/brand/chdev-logo-inverted.png'" class="c-navbar-link-logo" alt="Cesar Huesca" width="100" height="50" priority> -->
         <button type="button" class="c-links-name" (click)="goToSection(portfolioSections.hero)">
           <h1>{{'links.name' | translate}}</h1>
           <h2>{{'links.job' | translate}}</h2>
@@ -41,12 +42,6 @@
       </div>
 
     </div>
-
-
-
-
-
-
     <div class="c-links-copy">
       <span>{{'links.copy' | translate}}</span>
     </div>

@@ -1,13 +1,19 @@
 .c-links {
   @apply
   py-10
-  border-t
-  border-slate-200
-  dark:border-white/5
   text-xs
   uppercase
   tracking-[0.3em]
-  mt-10;
+  mt-10
+
+  border-t
+  dark:border-white/10
+  border-black/10
+  dark:bg-black
+  bg-white
+  shadow-2xl
+  dark:shadow-white/30
+  shadow-black;
 
   user-select: none;
   -webkit-user-drag: none;
@@ -18,16 +24,21 @@
   }
 
   .c-links-content-container {
-    @apply flex items-center justify-center gap-20 w-full;
+    @apply flex flex-col md:flex-row items-center justify-center md:gap-20 w-full;
   }
 
   .c-links-name-container {
-    @apply flex items-center justify-center active:scale-110 active:opacity-60 cursor-pointer transition;
+    @apply
+    flex
+    items-center
+    justify-center
+    active:scale-110
+    hover:opacity-40
+    cursor-pointer
+    transition;
   }
 
   .c-links-name {
-
-
     h1 {
       @apply text-xl opacity-95 text-center cursor-pointer;
     }
@@ -43,12 +54,42 @@
   }
 
   .c-links-link {
-    @apply hover:text-blue-500 active:scale-110 opacity-60 transition;
+    @apply
+    hover:text-blue-500
+    active:scale-115
+    opacity-60;
   }
 
   .c-links-copy {
     @apply opacity-60;
   }
+}
+
+.light .c-links-logo{
+  background-image: url('/assets/brand/chdev-logo-inverted.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  width: 100px;
+  aspect-ratio: 1 / 1;
+  display: block;
+}
+
+.dark .c-links-logo{
+  background-image: url('/assets/brand/chdev-logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  width: 100px;
+  aspect-ratio: 1 / 1;
+  display: block;
+}
 
 
+.tabletPortrait .c-links {
+  @apply pb-100!
+}
+
+.handsetPortrait .c-links {
+  @apply pb-40!
 }

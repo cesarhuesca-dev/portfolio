@@ -1,11 +1,10 @@
-import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { NavigateService, PortfolioSections } from '@services/navigate.service';
 
 @Component({
   selector: 'app-links',
-  imports: [TranslatePipe, NgOptimizedImage],
+  imports: [TranslatePipe],
   templateUrl: './links.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

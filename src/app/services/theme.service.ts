@@ -4,7 +4,7 @@ enum ThemeModes {
   // eslint-disable-next-line no-unused-vars
   dark = 'dark',
   // eslint-disable-next-line no-unused-vars
-  light = 'ligth',
+  light = 'light',
 }
 
 @Injectable({ providedIn: 'root' })
