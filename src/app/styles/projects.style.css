@@ -28,10 +28,7 @@
 
   .c-projects-item {
     @apply
-
     border
-    border-black/10
-    dark:border-slate-800
     rounded-4xl
     overflow-hidden
     transition-all
@@ -40,7 +37,14 @@
     hover:shadow-black/10
     dark:hover:shadow-white/5
     duration-500
-    ease-out;
+    ease-out
+
+    dark:text-white
+    text-slate-900
+    dark:border-gray-100/5
+    border-black/5
+    dark:bg-black
+    bg-gray-50;
 
     .c-projects-item-body {
       @apply
@@ -66,10 +70,9 @@
         @apply
         text-green-700
         bg-green-300/50
-        shadow-green-400/50
-        dark:border-green-400/70
-        dark:text-green-400
-        dark:bg-green-300/50
+        dark:border-green-800
+        dark:text-green-800
+        dark:bg-green-400
         shadow-xs;
       }
 
@@ -80,17 +83,15 @@
         bg-yellow-300/40
         dark:border-yellow-400/70
         dark:text-yellow-400
-        dark:bg-yellow-300/50
+        dark:bg-yellow-600/80
         shadow-xs
         shadow-orange-400/50;
       }
-
-
     }
 
     .c-projects-item-img {
 
-      @apply flex items-center justify-center mb-5;
+      @apply flex items-center justify-center mb-5 p-2 md:p-0;
 
       img {
         @apply rounded-2xl;
@@ -102,11 +103,11 @@
       @apply flex flex-col pl-8 pr-8;
 
       .c-projects-item-content-title {
-        @apply text-2xl mb-3 font-bold text-white transition-colors duration-300;
+        @apply text-2xl mb-3 font-bold opacity-90 transition-colors duration-300;
       }
 
       .c-projects-item-content-description {
-        @apply text-sm  mb-6 text-slate-300;
+        @apply text-sm  mb-6 opacity-60;
       }
 
     }

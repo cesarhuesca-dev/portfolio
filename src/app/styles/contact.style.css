@@ -118,7 +118,7 @@
         @apply flex items-center gap-4 opacity-80;
 
         .c-contact-card-content-email-icon {
-          @apply w-12 h-12 rounded-full bg-white/5 flex items-center justify-center transition-colors;
+          @apply w-12 h-12 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center transition-colors;
         }
 
         .c-contact-card-content-email-text {
