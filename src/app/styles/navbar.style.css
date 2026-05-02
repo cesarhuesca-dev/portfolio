@@ -54,7 +54,7 @@
   @apply flex items-center gap-4;
 
   .c-navbar-buttons-separator {
-    @apply h-4 w-px bg-white/10 mx-2;
+    @apply h-4 w-px bg-white/10 mx-2  hidden sm:block;
   }
 
   .c-navbar-button-lang {
@@ -70,7 +70,7 @@
   }
 
   .c-navbar-button-cv {
-    @apply text-sm font-bold bg-white text-black px-5 py-2 rounded-full hover:scale-105 transition-transform active:scale-95;
+    @apply hidden sm:block text-sm font-semibold bg-white text-black px-5 py-2 rounded-full hover:scale-105 transition-transform active:scale-95;
   }
 }
 

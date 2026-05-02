@@ -91,7 +91,7 @@
 
     .c-projects-item-img {
 
-      @apply flex items-center justify-center mb-5 p-2 md:p-0;
+      @apply flex items-center justify-center mb-5 p-2;
 
       img {
         @apply rounded-2xl;

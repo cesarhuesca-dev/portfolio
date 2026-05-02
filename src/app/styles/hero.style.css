@@ -23,47 +23,88 @@
   items-center
   gap-2
   px-4
-  py-1
+  py-4
   rounded-full
-  border
-  border-blue-500/20
-  bg-blue-500/5
-  text-blue-500
-  text-[11px]
-  font-bold
+  border-2
+
+  text-sm
+  font-semibold
   tracking-widest
-  uppercase mb-8;
+  uppercase mb-8
+
+  dark:border-blue-500/40
+  border-blue-900/40
+  dark:bg-blue-500/10
+  bg-blue-800/10
+  dark:text-blue-500
+  text-blue-800;
 
   .c-hero-pin {
-    @apply relative flex h-2 w-2;
+    @apply relative flex h-3 w-3;
 
     .c-hero-pin-effect {
-      @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75;
+      @apply animate-ping absolute inline-flex h-full w-full rounded-full dark:bg-blue-500 bg-blue-800 opacity-75 ;
     }
 
     .c-hero-bullet {
-      @apply relative inline-flex rounded-full h-2 w-2 bg-blue-500;
+      @apply relative inline-flex rounded-full h-3 w-3 dark:bg-blue-500 bg-blue-800;
     }
   }
 }
 
 .c-hero-button-container {
 
-  @apply flex justify-center gap-6;
+  @apply flex flex-col items-center justify-center gap-6;
 
-  .c-hero-button-contact {
-    @apply bg-black
-    dark:bg-white
-    text-white
-    dark:text-black
+  .c-hero-button-cv {
+    @apply
+    w-2/4
+    sm:hidden
+
     px-10 py-5
     rounded-2xl
-    font-bold
+    font-semibold
     text-lg
-    hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]
-    hover:opacity-70
+    transition-all
+
     active:scale-95
-    transition-all;
+    dark:hover:bg-gray-400
+    hover:bg-gray-700
+    bg-black
+    dark:bg-white
+
+    text-slate-200
+    dark:text-slate-900
+
+    shadow-gray-900/10
+    dark:shadow-gray-300/10
+    shadow-lg
+  }
+
+  .c-hero-button-contact {
+    @apply
+    sm:w-auto
+    w-2/4
+    px-10 py-5
+    rounded-2xl
+    font-semibold
+    text-lg
+    transition-all
+
+    active:scale-95
+    dark:hover:bg-gray-400
+    hover:bg-gray-700
+    bg-black
+    dark:bg-white
+
+    text-slate-200
+    dark:text-slate-900
+
+    shadow-gray-900/10
+    dark:shadow-gray-300/10
+    shadow-lg
+
+    ;
   }
 }
 
@@ -138,7 +179,7 @@
     }
 
     .c-hero-photo-container {
-      @apply opacity-60 rotate-5;
+      @apply blur-xs grayscale-50 rotate-5 transition;
     }
   }
 }

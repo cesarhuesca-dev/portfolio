@@ -21,6 +21,7 @@
   </div>
 
   <div class="c-hero-button-container ">
-      <button type="button" class="c-hero-button-contact">{{'hero.contact' | translate}}</button>
+      <button type="button" class="c-hero-button-cv" (click)="goToSection(portfolioSections.contact)">{{'navbar.download-cv' | translate}}</button>
+      <button type="button" class="c-hero-button-contact" (click)="goToSection(portfolioSections.contact)">{{'hero.contact' | translate}}</button>
   </div>
 </section>
